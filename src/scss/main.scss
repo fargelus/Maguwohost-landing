@@ -1,5 +1,14 @@
-$header-color: #ff0;
+@import "normalize";
+@import "vars";
 
-h1 {
-	background-color: $header-color;
+@import "button";
+@import "common";
+@import "modificators";
+@import "typography";
+@import "header";
+@import "welcome";
+@import "cols";
+
+body{
+	background-color: #fff;
 }

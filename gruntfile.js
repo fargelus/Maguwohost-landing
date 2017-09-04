@@ -4,46 +4,42 @@ module.exports = function(grunt) {
 		
 		pug: {
 			
-			options: {
-				pretty: true
-			},
-
-			compile: {
+			dist: {
 				options: {
-					data: {
-						debug: false
-					}
-				}
-			},
+					pretty: true
+				},			
 
-			files: {
-				src: "src/pug/main.pug",
-				dest: "dev/index.html"
-			}			
+				files: [{
+					expand: true,
+					cwd: 'src/pug',
+					src: '*.pug',
+					dest: 'dev/',
+					ext: '.html'
+				}]
+			}
 		},
 
 		sass: {
 
 			dist: {
-
-				options: {
-					style: "expanded"
-				},
-
-				files: {
-					"dev/all.css": "src/scss/main.scss"
-				}
+				files: [{
+					expand: true,
+					cwd: 'src/scss',
+					src: ['*.scss'],
+					dest: 'dev/css',
+					ext: '.css'
+				}]
 			}			
 		},
 
 		watch: {
 			src: {
-				files: "src/pug/main.pug",
+				files: "src/pug/*.pug",
 				tasks: ["pug"]
 			},
 			
 			css:{
-				files: "src/scss/main.scss",
+				files: "src/scss/*.scss",
 				tasks: ["sass"]
 			}			
 		},
@@ -51,13 +47,25 @@ module.exports = function(grunt) {
 		browserSync: {
 
 			bsFiles: {
-				src: ["dev/index.html", "dev/all.css"]
+				src: ["dev/index.html", "dev/css/main.css"]
 			},
 
 			options: {
 				watchTask: true,
 				server: './dev'
 			}
+		},
+
+		imagemin:{			
+			dynamic: {
+
+				files: [{
+					expand: true,
+					cwd: "src/images",
+					src: ["*.{png,jpg,gif,svg}"],
+					dest: "dev/images"
+				}]
+			}			
 		}
 	});
 
@@ -66,6 +74,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-sass");	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks("grunt-browser-sync");
+	grunt.loadNpmTasks("grunt-browser-sync");
+	grunt.loadNpmTasks("grunt-contrib-imagemin");
 
 	grunt.registerTask("default", ["browserSync", "watch"]);
 };

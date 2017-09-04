@@ -1,0 +1,25 @@
+.page-container{
+	padding-left: 95px;
+	padding-right: 95px;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+.nav-link{
+	&:hover{
+		color: $link-hover-color;
+	}	
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-col{
+	display: flex;
+	flex-direction: column;
+}

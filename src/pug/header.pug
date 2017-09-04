@@ -1,0 +1,22 @@
+.header.page-container
+	.header-left.flex-row
+		figure.logo.header__logo
+			img(src="../images/logo.png", alt="logo")
+			figcaption.figcaption.figcaption--right Maguwo
+				span.text-bold Host
+
+		nav.main-nav.flex-row.header__main-nav
+			-
+				var navLink = ["Home" , "About", "Pricing", "Domain", "Hosting"]
+			
+			each val in navLink
+				a(href="#").nav-link.text-upper= val
+
+	.contacts.header__contacts
+		.text.text-bold.contacts__text Do you need help ? Just Email, Live chat or Call us
+
+		.connections.flex-row
+			.connections__item
+				button(type="button").button.connections__button Live Chat
+			.connections__item
+				b.phone.connections__phone 6284-6534
