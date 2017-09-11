@@ -1,5 +1,7 @@
+@import "vars";	// FIX
+
 .button{
-	background-color: $button-color;
+	background-color: $yellow;
 	border: none;
 	padding: 10px 25px;
 	display: inline-block;

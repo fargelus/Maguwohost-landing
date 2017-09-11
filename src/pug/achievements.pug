@@ -1,0 +1,25 @@
+.achievements.page-container
+	.clients
+
+		.clients-intro
+			h3.clients-intro__title Our Clients
+
+			p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum.		
+
+		.clients-logo
+			-var imgs = ["tree-logo", "x-logo", "u-logo", "fish-logo"];
+
+			each val in imgs
+				-var imgsPath = "images/" + val + ".png"				
+				img(src=imgsPath, alt=val).clients-logo__img
+
+	.reviews
+		-var count = 3;
+		-var i = 0;
+		while i++ < 3			
+			blockquote.reviews-item
+				p.
+					&laquo;This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.&raquo;
+				cite.reviews-item__author.text-bold -Anna
+				img(src="images/review-author.jpg", alt="author-photo").reviews-item__author-photo.shape--round
+			

@@ -1,0 +1,56 @@
+.achievements{
+	background-color: #fff;
+	color: #adadad;
+
+	padding-bottom: 110px;
+}
+
+.clients{
+	display: flex;
+	flex-flow: row nowrap;
+
+	margin: {
+		top: 50px;
+		bottom: 60px;
+	}	
+	
+	.clients-intro{
+		flex: 1 1 325px;
+		margin-right: 75px;
+
+		&__title{
+			margin-bottom: 16px;
+			color: #000;
+		}
+	}
+
+	.clients-logo{
+		flex: 1 1 auto;
+
+		&__img{
+			margin-right: 15px;
+		}
+	}
+}
+
+.reviews{
+	display: flex;		
+
+	.reviews-item{
+		background-color: rgba(245, 243, 243, 0.5);
+		
+		padding: 15px 20px;
+
+		position: relative;
+
+		&__author{
+			color: #696969;
+		}
+
+		&__author-photo{			
+			position: absolute;
+			bottom: -50px;
+			right: 20px;
+		}		
+	}
+}

@@ -1,16 +1,16 @@
 section.welcome.page-container.text-center
 	h2 Just a Proffesional Web Hosting Services
 
-	.slogan.welcome__slogan modern  -  fast  -  reliable
+	.title.welcome__title modern  -  fast  -  reliable
 	
 	.company-img.welcome__company-img
 		img(src="images/spinner.png", alt="spinner")
 	
-	.check-domain
+	.check-domain.flex-row
 		input(type="text", value="Your Domain Name ...").check-domain__input
-		select.check-domain__select
-			option .com			
+		select.check-domain__select.text-bold
+			option .com
 			option .gov
 			option .org
-		button(type="button").button Check Availability
+		button(type="button").button.check-domain__button.text-size_medium Check Availability
 

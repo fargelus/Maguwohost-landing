@@ -1,3 +1,5 @@
+@import "vars";
+
 .page-container{
 	padding-left: 95px;
 	padding-right: 95px;
@@ -10,7 +12,7 @@ a{
 
 .nav-link{
 	&:hover{
-		color: $link-hover-color;
+		color: $yellow;
 	}	
 }
 

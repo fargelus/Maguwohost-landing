@@ -30,19 +30,7 @@ module.exports = function(grunt) {
 					ext: '.css'
 				}]
 			}			
-		},
-
-		watch: {
-			src: {
-				files: "src/pug/*.pug",
-				tasks: ["pug"]
-			},
-			
-			css:{
-				files: "src/scss/*.scss",
-				tasks: ["sass"]
-			}			
-		},
+		},		
 
 		browserSync: {
 
@@ -66,6 +54,24 @@ module.exports = function(grunt) {
 					dest: "dev/images"
 				}]
 			}			
+		},
+
+		watch: {					
+
+			src: {
+				files: "src/pug/*.pug",
+				tasks: ["pug"]
+			},
+			
+			css:{
+				files: "src/scss/*.scss",
+				tasks: ["sass"]
+			},
+
+			images: {
+				files: "src/images/*.{png,jpg,svg,gif}",
+				tasks: ["imagemin"]
+			}
 		}
 	});
 
@@ -73,8 +79,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-pug");
 	grunt.loadNpmTasks("grunt-contrib-sass");	
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks("grunt-browser-sync");
-	grunt.loadNpmTasks("grunt-browser-sync");
+	grunt.loadNpmTasks("grunt-browser-sync");	
 	grunt.loadNpmTasks("grunt-contrib-imagemin");
 
 	grunt.registerTask("default", ["browserSync", "watch"]);

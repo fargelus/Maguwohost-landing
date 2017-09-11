@@ -1,3 +1,5 @@
+@import "vars";
+
 .welcome{
 	background-image: url("../images/baloon.jpg");
 	background-repeat: no-repeat;
@@ -8,12 +10,41 @@
 	padding-top: 150px;
 	padding-bottom: 100px;
 
-	&__slogan{
+	&__title{
 		margin-top: 30px;
 		margin-bottom: 40px;
 	}
 
 	&__company-img{
 		margin-bottom: 60px;
+	}
+}
+
+.check-domain{
+	border: 15px solid #ddd;
+	max-width: 570px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	&__input, &__select, &__button{
+		flex-basis: 30px;
+		border: none;
+	}		
+
+	&__input{
+		flex-grow: 9;
+	}
+
+	&__select{
+		flex-grow: 4;
+		color: black;
+		background-color: $yellow;	
+	}
+
+	&__button{
+		flex-grow: 5;
+		color: white;
+		border-left: 1px solid;
 	}
 }
