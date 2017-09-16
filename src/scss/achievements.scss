@@ -29,6 +29,10 @@
 
 		&__img{
 			margin-right: 15px;
+
+			&:last-of-type{
+				margin-right: 0;
+			}
 		}
 	}
 }

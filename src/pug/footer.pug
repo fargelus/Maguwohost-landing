@@ -1,0 +1,41 @@
+include mixins.pug
+
+footer.footer.page-container
+	.map#image-map
+		img(src="images/map.png", alt="map", usemap="#companies-location")
+		map(name="companies-location")
+			area(alt="NYC", title="New York City", 
+			href="#", shape="rect", coords="18,74,261,204",
+			id="area-nyc")
+			area(alt="Jakarta", title="Jakarta Indonesia",
+			href="#", shape="rect", coords="559,214,754,305", 
+			id="area-jakarta")
+		
+		-var i = 0;
+		-var text = ["Jakarta, Indonesia 55282", "New York City, USA 10231"];
+		-var classes = ["jakarta", "nyc"];
+		while i < 2
+			figure(class="figure " + classes[i])
+				img(src="images/location-cursor.svg", alt="logo")
+				figcaption.figcaption= text[i++]
+
+
+	.footer-links.text-right
+		.footer-links__title Navigation
+		nav.column-nav
+			+createLinksFromList(["Home", "About", "Domain", "Hosting", "Contact"])
+		
+		.social-links.footer-links__social-links
+			i(class="fa fa-twitter social-links__item" aria-hidden="true")
+			i(class="fa fa-instagram social-links__item" aria-hidden="true")
+			i(class="fa fa-google-plus social-links__item" aria-hidden="true")
+
+		a(href="#").text Back to Top
+
+	.copyright.text-center
+		img(src="images/copy-logo.svg", alt="copy-logo")
+		.text-size_medium.copyright__label Copyright 2014 Maguwohost by FikriStudio
+
+
+
+

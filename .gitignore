@@ -2,5 +2,5 @@ node_modules/
 *.psd
 *.log
 dist/
-dev/
+build/
 .sass-cache

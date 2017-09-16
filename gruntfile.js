@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'src/pug',
 					src: '*.pug',
-					dest: 'dev/',
+					dest: 'build/',
 					ext: '.html'
 				}]
 			}
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'src/scss',
 					src: ['*.scss'],
-					dest: 'dev/css',
+					dest: 'build/css',
 					ext: '.css'
 				}]
 			}			
@@ -35,12 +35,12 @@ module.exports = function(grunt) {
 		browserSync: {
 
 			bsFiles: {
-				src: ["dev/index.html", "dev/css/main.css"]
+				src: ["build/index.html", "build/css/main.css"]
 			},
 
 			options: {
 				watchTask: true,
-				server: './dev'
+				server: './build'
 			}
 		},
 
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: "src/images",
 					src: ["*.{png,jpg,gif,svg}"],
-					dest: "dev/images"
+					dest: "build/images"
 				}]
 			}			
 		},
@@ -71,6 +71,23 @@ module.exports = function(grunt) {
 			images: {
 				files: "src/images/*.{png,jpg,svg,gif}",
 				tasks: ["imagemin"]
+			},
+
+			scripts: {
+				files: "src/js/*.js",
+				tasks: ["copy"]
+			}
+		},
+
+		copy:{
+			main:{
+				files: [{
+						expand: true,
+						cwd: "src/js/",
+						src: "**",
+						dest: "build/js"
+					}
+				]
 			}
 		}
 	});
@@ -80,7 +97,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-sass");	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks("grunt-browser-sync");	
-	grunt.loadNpmTasks("grunt-contrib-imagemin");
+	grunt.loadNpmTasks("grunt-contrib-imagemin");	
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	grunt.registerTask("default", ["browserSync", "watch"]);
 };

@@ -1,0 +1,89 @@
+@import "vars";
+
+.footer{
+	background-color: rgba(32, 34, 66, 0.9);
+
+	color: #fff;
+	
+	overflow: hidden;
+
+	padding-top: 95px;
+
+	&__figure{
+		margin-top: 0;
+	}	
+}
+
+.map{
+	float: left;
+	margin-right: 250px;
+	margin-bottom: 30px;
+
+	position: relative;
+
+	.figure{
+		position: absolute;		
+	}
+
+	.nyc{
+		visibility: hidden;
+		left: 190px;
+		top: 90px;
+	}
+
+	.jakarta{
+		visibility: hidden;
+		left: 590px;
+		top: 220px;
+	}		
+}
+
+.footer-links{
+	overflow: hidden;	
+
+	a{
+		color: inherit;
+	}
+
+	&__title{
+		margin-bottom: 35px;
+	}
+
+	&__social-links{
+		margin-top: 45px;
+		margin-bottom: 70px;
+	}
+}
+
+.copyright{
+	clear: both;
+
+	&__label{
+		margin-top: 5px;
+	}
+}
+
+.column-nav{
+	a{
+		display: inline-block;		
+		padding-left: 20px;
+		
+		line-height: 2.25;
+
+		&:not(:last-child){
+			border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+		}
+	}	
+}
+
+.social-links{
+	color: $yellow;
+
+	&__item{
+		display: inline-block;
+
+		& + & {
+			margin-left: 10px;
+		}
+	}	
+}
