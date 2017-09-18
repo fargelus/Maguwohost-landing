@@ -1,0 +1,39 @@
+@mixin colorize($color, $percent: 20%){
+    background-color: $color;
+
+    &:hover{
+        background-color: darken($color, $percent);
+    }
+}
+
+@mixin triangle($direction, $size, $color) {
+    width: 0;
+    height: 0;
+    border-width: $size;
+    border-style: solid;
+    border-color: $color;
+
+    @if $direction == "top" {
+    	border-left-color: transparent;
+	    border-right-color: transparent;
+	    border-top-style: none;
+    }
+
+    @if $direction == "right" {
+    	border-top-color: transparent;
+	    border-bottom-color: transparent;
+	    border-right: none;
+    }
+
+    @if $direction == "bottom" {
+    	border-bottom: none;
+	    border-left-color: transparent;
+	    border-right-color: transparent;
+    }
+
+    @if $direction == "left" {
+    	border-top-color: transparent;
+	    border-bottom-color: transparent;
+	    border-left: none;
+    }
+}

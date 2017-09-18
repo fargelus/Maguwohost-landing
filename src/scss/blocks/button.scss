@@ -1,0 +1,12 @@
+@import "../base/vars";	// FIX
+@import "../base/mixins";
+
+.button{	
+	border: none;
+	padding: 10px 25px;
+	display: inline-block;
+	
+	font-weight: 700;
+	
+	@include colorize($yellow);
+}

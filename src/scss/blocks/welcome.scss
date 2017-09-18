@@ -1,4 +1,5 @@
-@import "vars";
+@import "../base/vars";
+@import "../base/mixins";
 
 .welcome{
 	background-image: url("../images/baloon.jpg");
@@ -44,7 +45,18 @@
 	&__select{
 		flex-grow: 4;
 		color: black;
-		background-color: $yellow;	
+		background-color: $yellow;
+		
+		// width: 100%;
+
+		/* отключает оформление стандартных 
+		   GUI элементов операционной системой */
+		appearance: none; 		
+
+		// ie
+		&::-ms-expand{
+			display: none;
+		}		
 	}
 
 	&__button{
@@ -52,4 +64,10 @@
 		color: white;
 		border-left: 1px solid;
 	}
+}
+
+.select-wrapper{
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
 }

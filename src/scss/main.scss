@@ -1,18 +1,19 @@
-@import "normalize";
-@import "vars";
-@import "fonts";
+@import "base/normalize";
+@import "base/vars";
+@import "base/fonts";
+@import "base/typography";
 
-@import "button";
-@import "common";
-@import "modificators";
-@import "typography";
-@import "header";
-@import "welcome";
-@import "cols";
-@import "features";
-@import "achievements";
-@import "pricing";
-@import "footer";
+@import "blocks/button";
+@import "blocks/common";
+@import "blocks/header";
+@import "blocks/welcome";
+@import "blocks/cols";
+@import "blocks/features";
+@import "blocks/achievements";
+@import "blocks/pricing";
+@import "blocks/footer";
+
+@import "modificators/modificators";
 
 body{
 	background-color: #fff;

@@ -8,9 +8,10 @@ section.welcome.page-container.text-center
 	
 	.check-domain.flex-row
 		input(type="text", value="Your Domain Name ...").input.check-domain__input
-		select.select.check-domain__select.text-bold
-			option .com
-			option .gov
-			option .org
+		.select-wrapper
+			select.select.check-domain__select.text-bold
+				option .com
+				option .gov
+				option .org
 		button(type="button").button.check-domain__button.text-size_medium Check Availability
 
