@@ -3,7 +3,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			cwd: 'src/scss',
-			src: ['*.scss'],
+			src: ['**/*.scss'],
 			dest: 'build/css',
 			ext: '.css'
 		}]

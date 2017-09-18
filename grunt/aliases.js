@@ -1,3 +1,4 @@
 module.exports = {
-  'default': ["browserSync", "watch"]
+  'default': ["browserSync", "watch"],
+  'start': ["pug:dist", "sass", "imagemin", "copy"]
 };
