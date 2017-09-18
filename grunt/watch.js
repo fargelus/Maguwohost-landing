@@ -6,7 +6,7 @@ module.exports = {
 		
 	css:{
 		files: "src/scss/*.scss",
-		tasks: ["sass"]
+		tasks: ["sass", "postcss"]
 	},
 
 	images: {
