@@ -3,20 +3,24 @@
 .welcome{
 	background-image: url("../images/baloon.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%; // FIX ME
-	
+	background-size: 100% 100%; // FIX ME		
+
 	color: #fff;
 
 	padding-top: 150px;
 	padding-bottom: 100px;
 
-	&__title{
+	&__tag{
 		margin-top: 30px;
-		margin-bottom: 40px;
+		margin-bottom: 40px;		
 	}
 
 	&__company-img{
 		margin-bottom: 60px;
+	}
+
+	&__title{
+		font-family: Rockwell;
 	}
 }
 
@@ -29,11 +33,12 @@
 
 	&__input, &__select, &__button{
 		flex-basis: 30px;
-		border: none;
+		border: none;		
 	}		
 
 	&__input{
 		flex-grow: 9;
+		padding-left: 20px;
 	}
 
 	&__select{

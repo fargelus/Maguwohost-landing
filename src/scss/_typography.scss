@@ -1,3 +1,7 @@
+body{
+	font-family: Raleway;
+}
+
 h2{
 	font-size: 48px;
 	line-height: .5;
@@ -46,6 +50,10 @@ a{
 	font-style: italic;
 }
 
+.text-normal{
+	font-style: normal;
+}
+
 .text-upper{
 	text-transform: uppercase;
 }
@@ -58,7 +66,7 @@ a{
 	text-align: right;
 }
 
-.title{
+.tag{
 	font-size: 30px;
 	line-height: .8;
 }

@@ -26,20 +26,25 @@
 	}
 
 	.nyc{
-		visibility: hidden;
+		opacity: 0;
 		left: 190px;
-		top: 90px;
+		top: 90px;		
 	}
 
 	.jakarta{
-		visibility: hidden;
+		opacity: 0;
 		left: 590px;
-		top: 220px;
-	}		
+		top: 220px;		
+	}
+
+	.nyc, .jakarta{
+		transition: opacity .5s;		
+	}
 }
 
 .footer-links{
 	overflow: hidden;	
+	cursor: pointer;
 
 	a{
 		color: inherit;

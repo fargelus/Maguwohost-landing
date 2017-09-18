@@ -1,8 +1,8 @@
 @import "vars";
 
 .page-container{
-	padding-left: 95px;
-	padding-right: 95px;
+	padding-left: 80px;
+	padding-right: 80px;
 }
 
 a{
@@ -24,4 +24,13 @@ a{
 .flex-col{
 	display: flex;
 	flex-direction: column;
+}
+
+.fl-left{
+	float: left;
+	margin-right: 10px;
+}
+
+.input, .select, .button{
+	font-family: Raleway;
 }

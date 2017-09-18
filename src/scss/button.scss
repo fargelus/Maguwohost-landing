@@ -1,9 +1,19 @@
 @import "vars";	// FIX
 
-.button{
-	background-color: $yellow;
+@mixin colorize($color, $percent: 20%){
+	background-color: $color;
+
+	&:hover{
+		background-color: darken($color, $percent);
+	}
+}
+
+.button{	
 	border: none;
 	padding: 10px 25px;
 	display: inline-block;
+	
 	font-weight: 700;
+	
+	@include colorize($yellow);
 }

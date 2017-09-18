@@ -75,17 +75,32 @@ module.exports = function(grunt) {
 
 			scripts: {
 				files: "src/js/*.js",
-				tasks: ["copy"]
+				tasks: ["copy:js"]
+			},
+
+			fonts: {
+				files: "src/fonts/*",
+				tasks: ["copy:fonts"]
 			}
 		},
 
 		copy:{
-			main:{
+			js:{
 				files: [{
 						expand: true,
 						cwd: "src/js/",
 						src: "**",
 						dest: "build/js"
+					}					
+				]
+			},
+
+			fonts:{
+				files: [{
+						expand: true,
+						cwd: "src/fonts/",
+						src: "*",
+						dest: "build/fonts"
 					}
 				]
 			}

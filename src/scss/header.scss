@@ -14,6 +14,16 @@
 		padding-top: 45px;
 		padding-left: 10px;
 		padding-right: 10px;
+		margin-left: 40px;
+	}
+}
+
+.logo{
+	font-family: Rockwell;
+
+	.figcaption{
+		overflow: hidden;		
+		padding: 5px 40px 5px 0;
 	}
 }
 
@@ -21,15 +31,17 @@
 	align-items: center;
 }
 
-.main-nav {		
-	justify-content: space-between;		
+.main-nav {
+	display: flex;		
+	justify-content: space-between;	
 
 	.nav-link {
-		margin-right: 40px;		
+		margin-right: 40px;
+		text-transform: uppercase;
 	}
 }
 
-.contacts{
+.contacts{	
 	border-left: 1px solid #ebebeb;
 
 	&__text{
@@ -38,23 +50,50 @@
 }
 
 .connections{	
+	
+	display: table;
+	
+	&__button, &__phone{
+		white-space: nowrap;
+	}
 
 	&__button{
 		font-size: 14px;
+		line-height: 1;		
 	}
 
 	&__phone{
+		font-family: Lato;
 		font-size: 24px;
 	}
 	
-	&__item{
-		border-right: 1px solid #babbc4;
+	&__item{				
+		display: table-cell;
+		vertical-align: middle;
+
+		padding-right: 15px;				
+
+		& + & {
+			padding-left: 15px;
+		}
 		
-		padding-right: 15px;
-		padding-left: 15px;
+		position: relative;			
+
+		&::after{
+			content: "";
+			width: 1px;
+			background-color: #202242;
+			opacity: .31;
+			height: 75%;
+			position: absolute;
+			right: 0;
+			top: 12%;
+		}
 
 		&:last-of-type{
-			border-right: none;			
+			&::after{
+				height: 0;
+			}
 		}
 	}
 }

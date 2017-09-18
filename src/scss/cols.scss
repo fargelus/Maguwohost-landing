@@ -1,7 +1,8 @@
 @import "vars";
+@import "button";
 
-.cols{
-	
+.cols{		
+
 	color: white;
 	background-image: linear-gradient(to right, $dark-blue 50%, $yellow 50%);
 
@@ -15,6 +16,12 @@
 	&__first, &__second{
 		width: 50%;
 		align-items: center;		
+	}
+
+	&__first{
+		.button{
+			@include colorize($dark-blue, 5%);
+		}
 	}
 	
 	&__img, &__domain-name{
@@ -38,7 +45,9 @@
 		align-self: center;
 		margin-top: 35px;
 		padding-left: 50px;
-		padding-right: 50px;
+		padding-right: 50px;		
+		background-color: transparent;
+		border: 2px solid white;		
 	}
 
 	&__text{

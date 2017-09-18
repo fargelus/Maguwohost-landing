@@ -39,16 +39,19 @@
 
 .reviews{
 	display: flex;		
-
+	
 	.reviews-item{
 		background-color: rgba(245, 243, 243, 0.5);
 		
+		font-family: Rockwell;
+
 		padding: 15px 20px;
 
 		position: relative;
 
 		&__author{
 			color: #696969;
+			font-family: Raleway;
 		}
 
 		&__author-photo{			

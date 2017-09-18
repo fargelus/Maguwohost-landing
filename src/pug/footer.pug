@@ -5,10 +5,10 @@ footer.footer.page-container
 		img(src="images/map.png", alt="map", usemap="#companies-location")
 		map(name="companies-location")
 			area(alt="NYC", title="New York City", 
-			href="#", shape="rect", coords="18,74,261,204",
+			href="#", shape="rect", coords="27,81,281,210"
 			id="area-nyc")
 			area(alt="Jakarta", title="Jakarta Indonesia",
-			href="#", shape="rect", coords="559,214,754,305", 
+			href="#", shape="rect", coords="559,214,787,310", 
 			id="area-jakarta")
 		
 		-var i = 0;
@@ -16,21 +16,21 @@ footer.footer.page-container
 		-var classes = ["jakarta", "nyc"];
 		while i < 2
 			figure(class="figure " + classes[i])
-				img(src="images/location-cursor.svg", alt="logo")
+				img(src="images/location-cursor.svg", alt="logo").fl-left
 				figcaption.figcaption= text[i++]
 
 
 	.footer-links.text-right
 		.footer-links__title Navigation
 		nav.column-nav
-			+createLinksFromList(["Home", "About", "Domain", "Hosting", "Contact"])
+			+createNavLinksFromList(["Home", "About", "Domain", "Hosting", "Contact"])
 		
 		.social-links.footer-links__social-links
 			i(class="fa fa-twitter social-links__item" aria-hidden="true")
 			i(class="fa fa-instagram social-links__item" aria-hidden="true")
 			i(class="fa fa-google-plus social-links__item" aria-hidden="true")
 
-		a(href="#").text Back to Top
+		a(href="#").text.nav-link Back to Top
 
 	.copyright.text-center
 		img(src="images/copy-logo.svg", alt="copy-logo")

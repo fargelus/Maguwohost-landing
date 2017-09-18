@@ -5,17 +5,17 @@ var nycFigure = document.getElementsByClassName('nyc');
 var jakartaFigure = document.getElementsByClassName('jakarta');
 
 areaNyc.addEventListener("mouseenter", function () {		
-	nycFigure[0].style.visibility = "visible";
+	nycFigure[0].style.opacity = "1";
 });
 
 areaNyc.addEventListener("mouseleave", function () {		
-	nycFigure[0].style.visibility = "hidden";
+	nycFigure[0].style.opacity = "0";
 });
 
 areaJakarta.addEventListener("mouseenter", function () {
-	jakartaFigure[0].style.visibility = "visible";
+	jakartaFigure[0].style.opacity = "1";
 });
 
 areaJakarta.addEventListener("mouseleave", function () {
-	jakartaFigure[0].style.visibility = "hidden";
+	jakartaFigure[0].style.opacity = "0";
 });

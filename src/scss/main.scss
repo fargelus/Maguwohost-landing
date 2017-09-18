@@ -1,5 +1,6 @@
 @import "normalize";
 @import "vars";
+@import "fonts";
 
 @import "button";
 @import "common";
@@ -17,3 +18,7 @@ body{
 	background-color: #fff;
 	box-sizing: border-box;
 }
+
+@include createFontFace("Rockwell");
+@include createFontFace("Raleway");
+@include createFontFace("Lato");
