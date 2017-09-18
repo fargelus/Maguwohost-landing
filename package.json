@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "Maguwohost",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,10 +20,11 @@
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-newer": "^1.3.0",
+    "grunt-contrib-watch": "^1.0.0",    
+    "load-grunt-config": "^0.19.2",
     "load-grunt-tasks": "^3.5.2",
-    "node-normalize-scss": "^3.0.0"
+    "node-normalize-scss": "^3.0.0",
+    "time-grunt": "^1.4.0"
   },
   "dependencies": {
     "browser-sync": "^2.18.13"
